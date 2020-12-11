@@ -4,7 +4,6 @@ DROP TABLE IF EXISTS episodes_writers;
 
 CREATE TABLE episodes (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    season INT,
     episode INT,
     title TEXT NOT NULL
 );
@@ -12,6 +11,7 @@ CREATE TABLE episodes (
 CREATE TABLE writers (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL,
+    episode INT
 );
 
 CREATE TABLE episodes_writers (
